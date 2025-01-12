@@ -1,0 +1,83 @@
+/* Reset and base styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5dc; /* Beige background */
+    color: #333;
+}
+
+/* Smooth block for title */
+.gallery-header {
+    background-color: #4A90E2;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-bottom: 5px solid #3672b5;
+    margin-bottom: 20px;
+}
+
+.gallery-title {
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+/* Gallery container */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Individual app tiles */
+.app {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    padding: 20px;
+    overflow: hidden;
+    text-decoration: none; /* Remove underline */
+    color: inherit;
+}
+
+.app img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    transition: transform 0.3s;
+}
+
+.app h3 {
+    font-size: 1.2rem;
+    color: #4A4A4A;
+}
+
+/* Hover effect */
+.app:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+.app:hover img {
+    transform: scale(1.1);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .gallery-title {
+        font-size: 2rem;
+    }
+
+    .app img {
+        width: 80px;
+        height: 80px;
+    }
+}
